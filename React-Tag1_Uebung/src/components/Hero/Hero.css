@@ -1,0 +1,12 @@
+* {
+  color: #bdbddd;
+}
+
+h1 {
+  font-family: "Poppins-Bold";
+  font-size: 4rem;
+}
+
+h1 span {
+  color: #90a0d9;
+}

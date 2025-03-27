@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: "Serif";
+  src: url(/src/assets/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf)
+    format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url(/src/assets/fonts/Rubik/Rubik-VariableFont_wght.ttf)
+    format("truetype");
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+html {
+  max-width: 111vw;
+  font-family: Rubik;
+  background-color: #fef8f5;
+}
