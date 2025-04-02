@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { Cyborg } from "react-kawaii";
 
-const MOODS: mood = [
+const MOODS = [
   "sad",
   "shocked",
   "happy",
