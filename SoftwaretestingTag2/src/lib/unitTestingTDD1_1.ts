@@ -12,5 +12,3 @@ export function checkPalindrome(word: string): boolean {
 
 - join(""): macht daraus wieder "level"
 */
-
-// TODO: Wie würden Palindrom-Tests mit Groß-/Kleinschreibung, Leerzeichen und Sonderzeichen funzen?
