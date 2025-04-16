@@ -1,9 +1,4 @@
-import {
-  createBrowserRouter,
-  Link,
-  Outlet,
-  RouterProvider,
-} from "react-router";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -34,24 +29,11 @@ function Layout() {
   return (
     <main>
       <header>
-        <nav>
-          <Navigation />
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/products">Products</Link>
-        </nav>
+        <Navigation />
       </header>
 
-      <section className="hero">
-        <button>
-          <Link to="/categories">Explore Categories</Link>
-        </button>
-      </section>
-
       <Outlet />
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </main>
   );
 }
