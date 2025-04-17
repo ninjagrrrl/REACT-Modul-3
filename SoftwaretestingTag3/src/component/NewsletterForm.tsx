@@ -1,6 +1,8 @@
 import { useState } from "react";
 
-//// Komponente für das Newsletter-Formular
+//! anmerkung: habe hier extrem viel kommentiert um zum üben und mir nochmal bewusst zu machen, was genau in jedem schritt passiert
+
+//// Komponente für Newsletter-Formular
 export function NewsletterForm() {
   //// State für E-Mail-Feld
   const [email, setEmail] = useState("");
@@ -13,7 +15,7 @@ export function NewsletterForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     //// Verhindert das automatische Neuladen der Seite
     e.preventDefault();
-    //// Prüft, ob E-Mail ein "@" enthält & die Checkbox angeklickt wurde
+    //// Prüft, ob E-Mail ein "@" enthält & Checkbox angeklickt wurde
     if (email.includes("@") && checked) {
       //// Setzt Zustand auf "erfolgreich angemeldet"
       setIsSubscribed(true);
