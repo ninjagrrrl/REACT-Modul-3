@@ -1,33 +1,21 @@
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router";
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import RootLayout from "./components/RootLayout";
 import Home from "./pages/Home";
 import AllBeers from "./pages/AllBeers";
-import BeerDetails from "./pages/BeerDetails";
-import NavBar from "./components/NavBar";
+import SingleBeerPage from "./pages/SingleBeerPage";
+import RandomBeerPage from "./components/RandomBeerPage";
 
 const router = createBrowserRouter([
   {
-    Component: Layout,
+    Component: RootLayout,
     children: [
       { path: "/", Component: Home },
       { path: "/allbeers", Component: AllBeers },
-      { path: "/allbeers/:id", Component: BeerDetails },
+      { path: "/allbeers/:id", Component: SingleBeerPage },
+      { path: "/random/", Component: RandomBeerPage },
     ],
   },
 ]);
-
-function Layout() {
-  return (
-    <>
-      <header>
-        <NavBar />
-      </header>
-      <main>
-        <Outlet />
-      </main>
-    </>
-  );
-}
 
 export default function App() {
   return <RouterProvider router={router} />;
