@@ -4,7 +4,6 @@ import { Beer } from "../types/Beer";
 
 function SingleBeerPage() {
   const { id } = useParams();
-  console.log(id);
   const [beer, setBeer] = useState<Beer | null>(null);
 
   useEffect(() => {
