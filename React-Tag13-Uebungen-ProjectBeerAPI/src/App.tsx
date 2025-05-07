@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import RootLayout from "./components/RootLayout";
+import RootLayout from "./layouts/RootLayout";
 import Home from "./pages/Home";
 import AllBeers from "./pages/AllBeers";
 import SingleBeerPage from "./pages/SingleBeerPage";
-import RandomBeerPage from "./components/RandomBeerPage";
+import RandomBeerPage from "./pages/RandomBeerPage";
 
 const router = createBrowserRouter([
   {

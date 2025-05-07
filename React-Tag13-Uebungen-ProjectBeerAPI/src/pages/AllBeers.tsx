@@ -3,18 +3,13 @@ import { Link } from "react-router-dom";
 import { Beer } from "../types/Beer";
 
 function AllBeers() {
-  //// State für Bierliste
   const [beers, setBeers] = useState<Beer[]>([]);
-  // console.log(beers);
-  //// State für Ladezustand
   const [loading, setLoading] = useState(true);
-  //// State für mögliche Fehler beim Laden
   const [error, setError] = useState<string | null>(null);
 
-  //// Läuft nur beim ersten Rendern, lädt die Daten von Bier-API
   useEffect(() => {
     setLoading(true);
-    setError(null); //// vorherigen Fehler zurücksetzen, falls vorhanden
+    setError(null);
     console.log("Die Komponente ist geladen!");
     fetch("https://ih-beers-api2.herokuapp.com/beers")
       .then((res) => {
@@ -24,25 +19,22 @@ function AllBeers() {
         return res.json();
       })
       .then((data) => {
-        setBeers(data); //// API-Daten im State speichern
+        setBeers(data);
       })
       .catch((error) => {
-        setError(error.message); //// Fehlermeldung speichern
+        setError(error.message);
         console.error("Error while loading:", error);
       })
       .finally(() => {
-        setLoading(false); //// Ladevorgang beendet
+        setLoading(false);
       });
   }, []);
 
   return (
     <div>
       <h1>All Beers</h1>
-      {/* Fehlermeldung anzeigen, falls Fehler */}
       {error && <p>{error}</p>}
-      {/* Ladevorgang anzeigen, solange geladen wird */}
       {loading && <p>Is loading...</p>}
-      {/* Bierlist anzeigen, wenn fertig geladen */}
       {!loading &&
         beers.map((beer) => (
           <div key={beer._id}>
