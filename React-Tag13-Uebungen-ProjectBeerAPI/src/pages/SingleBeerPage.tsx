@@ -3,12 +3,8 @@ import { useParams } from "react-router-dom";
 import { Beer } from "../types/Beer";
 
 function SingleBeerPage() {
-  // const wasInDerUrlSteht = useParams();
-  // console.log(wasInDerUrlSteht);
-
   const { id } = useParams();
   console.log(id);
-  // to do: API fetchen und in useState speichern
   const [beer, setBeer] = useState<Beer | null>(null);
 
   useEffect(() => {
